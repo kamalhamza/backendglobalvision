@@ -82,7 +82,7 @@ router.post(`/register`,async (req,res)=>{
 // -------------Connexion----------------
 router.post ('/login',async(req,res)=>{
     const user = await User.findOne({email:req.body.email})//On cherche l'email utilisateur'
-    const secret=process.env.secret;
+    const secret='hamzakamal';
     if (!user){
         return res.status(400).send('utilisateur introuvable')
     }
